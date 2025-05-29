@@ -6,7 +6,7 @@ import os
 # Streamlit page config
 st.set_page_config(page_title="Gaming Trends 2024 Insights", layout="wide")
 st.title("Gaming Trends 2024 Insights Dashboard")
-st.markdown("Explore predictions and actionable insights using XGBoost and PDPs")
+st.markdown("Explore predictions and actionable insights using RandomizedSearchCV for RandomForestRegressor and PDPs")
 
 # stakeholder to feature mapping
 stakeholder_map = {
