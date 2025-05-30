@@ -1,3 +1,4 @@
+from pdp_insights.frontend.pdp_insights import insight_text
 import streamlit as st
 import pandas as pd
 import joblib
@@ -92,6 +93,9 @@ for feature in stakeholder_map[stakeholder]:
     if os.path.exists(image_path):
         st.markdown(f"### {readable_title}")
         st.image(image_path, caption=f"PDP: {feature}", use_container_width=True)
+        if feature in insight_text:
+            st.markdown("**Insights**")
+            st.markdown(insight_text[feature])
         st.markdown("---")
     else:
         st.warning(f"No PDP found for feature: {feature}")
